@@ -8,6 +8,7 @@ public class LinkedList<T> {
         if(head == null)
         {
             head = new Node(data);
+            return;
         }
         Node current = head;
         // iterating through the linked list to tail
@@ -26,4 +27,11 @@ public class LinkedList<T> {
         head = newNode;
     }
 
+    public Node getHead() {
+        return head;
+    }
+
+    public void setHead(Node head) {
+        this.head = head;
+    }
 }
