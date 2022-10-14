@@ -16,5 +16,18 @@ public class Main {
             current = current.getNext();
         }
         System.out.println(current.getData());
+
+
+        list.deleteByValue(4);
+
+
+        current = list.getHead();
+        System.out.println("*************");
+        while (current.getNext() != null)
+        {
+            System.out.println(current.getData());
+            current = current.getNext();
+        }
+        System.out.println(current.getData());
     }
 }

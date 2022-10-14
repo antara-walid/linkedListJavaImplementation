@@ -27,6 +27,27 @@ public class LinkedList<T> {
         head = newNode;
     }
 
+    public void deleteByValue(T data)
+    {
+        if(head.getData() == data )
+        {
+            head = head.getNext();
+            return;
+        }
+        Node current = head;
+        while (current.getNext() != null)
+        {
+            if(current.getNext().getData() == data ) // here in general case I should use comparable
+            {
+                // deleting the node
+                current.setNext(current.getNext().getNext());
+                return;
+            }
+
+            current = current.getNext();
+        }
+    }
+
     public Node getHead() {
         return head;
     }
